@@ -13,7 +13,7 @@ interface Props {
 
 export const PokemonCard = ( { pokemon } : Props ) => {
 
-    const [ bgColor, setBgColor ] = useState('grey');
+    const [ bgColor, setBgColor ] = useState('red');
     const navigation = useNavigation();
     const isMounted = useRef( true )
 
@@ -24,7 +24,7 @@ export const PokemonCard = ( { pokemon } : Props ) => {
     }, [])
 
     return (
-        <TouchableOpacity activeOpacity={ 0.9 } onPress={ () => navigation.navigate('PokemonScreen') } >
+        <TouchableOpacity activeOpacity={ 0.9 } onPress={ () => navigation.navigate('PokemonScreen', { simplePokemon: pokemon }) } >
             <View style={{
                 ...styles.cardContainer, 
                 width: widthWindow * 0.4,
