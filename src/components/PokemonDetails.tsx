@@ -9,11 +9,9 @@ interface Props {
 }
 
 export const PokemonDetails = ( { pokemon } : Props ) => {
-    
-    console.log( pokemon.types );
-    
+        
     return (
-        <ScrollView style={{ ...StyleSheet.absoluteFillObject }} showsVerticalScrollIndicator={ false }>
+        <ScrollView style={{ ...StyleSheet.absoluteFillObject, marginBottom: 50 }} showsVerticalScrollIndicator={ false }>
             <View style={ styles.container }>
                 {/* Types */}
                 <View style={{ marginHorizontal: 20 }}>
